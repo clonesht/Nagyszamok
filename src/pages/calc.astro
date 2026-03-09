@@ -1,0 +1,23 @@
+---
+import Layout from "#layouts/Layout.astro";
+import Card from "#components/Card.astro";
+
+const emptyCard = {
+  title: "Saját számok",
+  slug: "sajat-szamitas",
+  category: "custom",
+  valueBig: 500,
+  valueBigTitle: "milliárd Ft",
+  valueSmallTitle: "minden adófizetőnek",
+  sources: {},
+  descr: "",
+};
+---
+
+
+<Layout title="Saját számítás">
+  <main>
+    <Card card={emptyCard} editable={true} />
+    <script src="#public/calc.js"/>
+  </main>
+</Layout>

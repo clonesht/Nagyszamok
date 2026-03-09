@@ -1,0 +1,66 @@
+body {
+  background-color: #f2f1ec; font-family: Literata;
+  font-size: 18px; line-height: 22px;
+}
+h1, h2 {
+  font-weight: normal; font-size: 38px; line-height: 52px;
+}
+a { color: #000; text-decoration-color: #333; text-decoration-thickness: 1px; }
+
+/* Header */
+header { margin: 20px; position: relative; }
+header .logo, header .calc {
+  text-transform: uppercase; border-bottom: 1px solid #EEE;
+  font-size: 14px; font-family: Consolas, monospace;
+}
+header .logo { font-weight: bold }
+header .calc {
+  right: 10px; position: absolute;
+  font-size: 11px; text-decoration: underline 1.5px #0000002e;
+}
+
+.more-link { padding: 20px; display: block; font-size: 15px }
+
+/* Card */
+.card {
+  width: 610px; margin: auto; border-radius: 5px; padding: 30px;
+  background-color: #56ada9; background-image: url(/img/card-bg.png);
+  background-size: 50px; background-position: 10px 10px; color: #16302f;
+}
+.card h2 { margin-top: 0px; outline: none }
+
+/* Value */
+.card .value {
+  font-size: 32px; line-height: 38px; text-align: center; margin-bottom: 30px;
+}
+.card .value .number {
+  font-size: 120%; margin: 10px
+}
+.card .value-big { font-size: 42px; color: #FFF }
+.card .value-small .number { color: #FFF371; }
+.card .value-small .label { border-bottom: 5px solid #EEE; color: white; }
+
+/* Editable */
+#card-editable .value-big .number {
+  background-color: #eeeeee29; outline: 2px solid #EEE; padding: 17px 20px;
+  display: inline-block; line-height: 37px;
+}
+
+/* Sep */
+.card .value-sep { text-align: center; margin: 30px; position: relative; }
+.card .value-sep:before {
+  content: ""; display: block; width: 100%; height: 1px;  top: 7px;
+  background-color: #2f6563; margin-top: 5px; position: absolute;
+}
+.card .value-sep .label {
+  background-color: #56ada9; z-index: 999;
+  position: relative; padding: 15px;
+}
+
+/* Descr */
+.card .descr {
+  border-left: 5px solid #2f6563; padding-left: 10px;
+}
+.card a {
+  color: #16302f; text-decoration: none; border-bottom: 2px solid #2f6563;
+}

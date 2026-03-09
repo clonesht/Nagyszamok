@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "title": "Az MNB botrányban érintett közpénz",
+      "slug": "mnb-kozpenz",
+      "category": "corruption",
+      "valueBig": 500,
+      "valueBigTitle": "milliárd forint",
+      "valueSmallTitle": "minden adófizetőnek",
+      "sources": {
+        "#1": "https://444.hu"
+      },
+      "descr": "A Matolcsy-féle alapítványok körül eltűnt és elvizsgált közpénzek teljes becsült összege."
+    },
+    {
+      "title": "Stadionépítések 10 év alatt",
+      "slug": "stadion-epitesek",
+      "category": "sport",
+      "valueBig": 600,
+      "valueBigTitle": "milliárd forint",
+      "valueSmallTitle": "minden adófizetőnek",
+      "sources": {
+        "#1": "https://g7.hu"
+      },
+      "descr": "27+ stadion építési és felújítási költsége 2014 és 2024 között."
+    }
+  ]
+}

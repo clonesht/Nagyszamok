@@ -1,0 +1,28 @@
+---
+
+const { title } = Astro.props;
+import "../public/global.css";
+import "../public/fonts.css";
+
+---
+
+<!doctype html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="Magyarországi milliárdok érthetőbb léptékben">
+  <meta name="keywords" content="Magyarország, Korrupció, Választás, Számolás, Kalkulátor">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, interactive-widget=resizes-content">
+  <title>{title ? `${title} - Nagyszámok.hu` : "Nagyszámok.hu - Milliárdok érthetőbb léptékben"}</title>
+  <link rel="preload" href="/fonts/literata-v40-latin_latin-ext-regular.woff2" as="font" type="font/woff2" crossorigin>
+</head>
+<body>
+  <header>
+    <a href="/" class="logo">Nagyszamok.hu</a>
+    <a href="/calc" class="calc">Saját számolás</a>
+  </header>
+  <main>
+    <slot />
+  </main>
+</body>
+</html>

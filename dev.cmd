@@ -1,0 +1,1 @@
+node --optimize_for_size "node_modules\.bin\\..\astro\astro.js" dev --host "127.0.0.1"

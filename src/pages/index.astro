@@ -1,17 +1,25 @@
 ---
+import Card from "#components/Card.astro";
+import Layout from "#layouts/Layout.astro";
+import cards from "#data/cards.json" assert { type: "json" };
 
+const cardFirst = cards.items[0];
+const cardsMore = cards.items.slice(1);
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout>
+  <main>
+    <Card card={cardFirst} />
+
+    <h2>Továbbiak</h2>
+    <ul class="link-list">
+      {cardsMore.map(card => (
+        <li>
+          <a href={`/tema/${card.slug}`}>
+            <b>{card.title}</b> — {card.valueBig} {card.valueBigTitle}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </main>
+</Layout>

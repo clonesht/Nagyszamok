@@ -1,0 +1,26 @@
+{
+  "fmt": {
+    "jsx.multiLineParens": "never",
+    "line-width": 200,
+    "preferSingleLine": true
+  },
+  "lint": {
+    "rules": {
+      "include": [
+        "no-const-assign"
+      ],
+      "exclude": [
+        "no-window",
+        "no-window-prefix",
+        "prefer-const",
+        "no-unused-vars",
+        "require-await"
+      ]
+    }
+  },
+  "imports": {
+    "astro": "npm:astro@^5.17.1",
+    "astro:actions": "npm:astro",
+    "astro:schema": "npm:astro"
+  }
+}
