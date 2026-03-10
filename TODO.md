@@ -1,6 +1,6 @@
 + Share button
 + Custom category colors
-- Footer
++ Footer
 - Deploy to cf
 - Mobile view
 - Img gen (satori)
