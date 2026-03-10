@@ -34,7 +34,7 @@ header .calc .title { text-decoration: underline 1.5px #0000002e; }
   background-size: 50px; background-position: 10px 10px; color: #16302f;
   margin-bottom: 50px; position: relative;
 }
-.card h2 { margin-top: 0px; outline: none }
+.card h2 { margin-top: 0px; outline: none; }
 
 /* Mutations */
 .card.card-sport {
@@ -114,4 +114,9 @@ header .calc .title { text-decoration: underline 1.5px #0000002e; }
 footer {
   font-size: 12px; text-align: center; padding-bottom: 10px;
   font-family: Consolas;
+}
+
+@media (max-width: 600px) {  /* Mobile */
+  .card h2 { font-size: 30px; line-height: 45px }
+  .card .value { font-size: 34px; line-height: 36px; }
 }
