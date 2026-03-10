@@ -13,13 +13,22 @@ import "../public/fonts.css";
   <meta name="description" content="Magyarországi milliárdok érthetőbb léptékben">
   <meta name="keywords" content="Magyarország, Korrupció, Választás, Számolás, Kalkulátor">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, interactive-widget=resizes-content">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <title>{title ? `${title} - Nagyszámok.hu` : "Nagyszámok.hu - Milliárdok érthetőbb léptékben"}</title>
   <link rel="preload" href="/fonts/literata-v40-latin_latin-ext-regular.woff2" as="font" type="font/woff2" crossorigin>
 </head>
 <body>
   <header>
-    <a href="/" class="logo">Nagyszamok.hu</a>
-    <a href="/calc" class="calc">Saját számolás</a>
+    <a href="/" class="logo">
+      <img src="/img/logo.png" width=16 height=16/>
+      <span class="title">Nagyszamok.hu</span>
+    </a>
+    <a href="/calc" class="calc">
+      +
+     <span class="title">Saját számolás</span>
+    </a>
   </header>
   <main>
     <slot />

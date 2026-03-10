@@ -1,23 +1,23 @@
 ---
 import Layout from "#layouts/Layout.astro";
 import Card from "#components/Card.astro";
-import cards from "#data/cards.json";
+import { cards } from "#data/data.js";
 
 export async function getStaticPaths() {
-  return cards.items.map(card => ({
+  return cards.map(card => ({
     params: { slug: card.slug },
     props: { card },
   }));
 }
 
 const { card } = Astro.props;
+const cardsMore = cards.filter((c) => c.title != card.title);
 ---
 
-<Layout title="Saját számítás">
-  <main>
-    <div style="margin-top: 20px;">
-      <Card card={card} />
-    </div>
-    <a href="/" class="more-link">&larr; Több adat a főoldalon</a>
-  </main>
+<Layout title={card.title}>
+  <Card card={card} />
+  <h3>További adatok:</h3>
+  {cardsMore.map(card => (
+    <Card card={card} />
+  ))}
 </Layout>

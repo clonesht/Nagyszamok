@@ -1,25 +1,15 @@
 ---
 import Card from "#components/Card.astro";
 import Layout from "#layouts/Layout.astro";
-import cards from "#data/cards.json" assert { type: "json" };
+import { cards } from "#data/data.js";
 
-const cardFirst = cards.items[0];
-const cardsMore = cards.items.slice(1);
+const cardFirst = cards[0];
+const cardsMore = cards.slice(1);
 ---
 
 <Layout>
-  <main>
-    <Card card={cardFirst} />
-
-    <h2>Továbbiak</h2>
-    <ul class="link-list">
-      {cardsMore.map(card => (
-        <li>
-          <a href={`/tema/${card.slug}`}>
-            <b>{card.title}</b> — {card.valueBig} {card.valueBigTitle}
-          </a>
-        </li>
-      ))}
-    </ul>
-  </main>
+  <Card card={cardFirst} />
+  {cardsMore.map(card => (
+    <Card card={card} />
+  ))}
 </Layout>

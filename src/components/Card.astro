@@ -1,8 +1,8 @@
 ---
-import { formatHuf, calcValueSmall, TAXPAYERS } from '#utils/format.js';
-import cards from '#data/cards.json';
+import { formatHuf, calcValueSmall, TAXPAYERS } from "#utils/format.js";
 
 const { card, editable = false } = Astro.props;
+
 const valueSmall = calcValueSmall(card.valueBig);
 const editableValue = editable ? "plaintext-only" : undefined;
 ---
@@ -12,22 +12,26 @@ const editableValue = editable ? "plaintext-only" : undefined;
 >
   <h2 contenteditable={editableValue}>{card.title}:</h2>
 
-  <div class="value-big value">
-    <span class="number" contenteditable={editableValue}>{card.valueBig}</span>
-    <span class="label">{card.valueBigTitle}</span>
+  <div class="values">
+    <div class="value-big value">
+      <span class="number" contenteditable={editableValue}>{card.valueBig}</span>
+      <span class="currency">{card.valueBigCurrency}</span>
+    </div>
+
+    <div class="value-sep"><span class="title">ez lebontva:</span></div>
+
+    <div class="value-small value" class:list={[{ "value-long": (card.valueSmallTitle.length + card.valueSmallCurrency.length) > 25 }]}>
+      <span class="number">-{formatHuf(valueSmall)}</span>
+      <span class="currency">{card.valueSmallCurrency}</span>
+      <span class="title">{card.valueSmallTitle}</span>
+    </div>
   </div>
 
-  <div class="value-sep"><span class="label">ez lebontva:</span></div>
+  { card.descr && (
+    <p class="descr">{card.descr}</p>
+  ) }
 
-  <div class="value-small value">
-    <span class="number">{formatHuf(valueSmall)}</span>
-    <span class="label">{card.valueSmallTitle}</span>
-  </div>
-
-  <p class="descr">{card.descr}</p>
-
-
-  {Object.keys(card.sources).length > 0 && (
+  { Object.keys(card.sources).length > 0 && (
     <div class="sources">
       Forrás:
       {Object.entries(card.sources).map(([name, url]) => (
@@ -35,4 +39,12 @@ const editableValue = editable ? "plaintext-only" : undefined;
       ))}
     </div>
   )}
+
+  { !editable && (
+    <div class="share">
+      <a class="share-link" href={`/tema/${card.slug}`}>Megosztás</a>
+    </div>
+  )}
 </div>
+
+<script src="#public/card.js"/>

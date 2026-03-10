@@ -2,10 +2,14 @@ body {
   background-color: #f2f1ec; font-family: Literata;
   font-size: 18px; line-height: 22px;
 }
-h1, h2 {
+h1, h2, h3 {
   font-weight: normal; font-size: 38px; line-height: 52px;
 }
+h3 { text-align: center; font-size: 20px }
 a { color: #000; text-decoration-color: #333; text-decoration-thickness: 1px; }
+a:hover, a:hover .title {
+  text-decoration: none !important; border-bottom-color: transparent !important;
+}
 
 /* Header */
 header { margin: 20px; position: relative; }
@@ -13,32 +17,60 @@ header .logo, header .calc {
   text-transform: uppercase; border-bottom: 1px solid #EEE;
   font-size: 14px; font-family: Consolas, monospace;
 }
-header .logo { font-weight: bold }
+header .logo { font-weight: bold; text-decoration: none }
+header .logo .title { text-decoration: underline; vertical-align: 4px; }
 header .calc {
-  right: 10px; position: absolute;
-  font-size: 11px; text-decoration: underline 1.5px #0000002e;
+  right: 10px; position: absolute; font-size: 11px; text-decoration: none
 }
+header .calc .title { text-decoration: underline 1.5px #0000002e; }
+
 
 .more-link { padding: 20px; display: block; font-size: 15px }
 
 /* Card */
 .card {
-  width: 610px; margin: auto; border-radius: 5px; padding: 30px;
-  background-color: #56ada9; background-image: url(/img/card-bg.png);
+  max-width: 610px; margin: auto; border-radius: 5px; padding: 30px;
+  background-color: #56ada9; background-image: url(/img/card-bg-t.png);
   background-size: 50px; background-position: 10px 10px; color: #16302f;
+  margin-bottom: 50px; position: relative;
 }
 .card h2 { margin-top: 0px; outline: none }
+
+/* Mutations */
+.card.card-sport {
+  background-color: #f8c33a;
+  .value-sep .title { background-color: #f8c33a }
+  .value-small { color: #fd3232 }
+}
+.card.card-debt {
+  background-color: #ff8976;
+  .value-sep .title { background-color: #ff8976 }
+}
+.card.card-propaganda {
+  background-color: #5badea;
+  .value-sep .title { background-color: #5badea }
+}
+.card.card-environment {
+  background-color: #a7a7a7;
+  .value-sep .title { background-color: #a7a7a7 }
+}
+.card.card-ner {
+  background-color: #f4b05f;
+  .value-sep .title { background-color: #f4b05f }
+}
+
 
 /* Value */
 .card .value {
   font-size: 32px; line-height: 38px; text-align: center; margin-bottom: 30px;
 }
-.card .value .number {
-  font-size: 120%; margin: 10px
-}
+.card .value .number { font-size: 120%; }
 .card .value-big { font-size: 42px; color: #FFF }
-.card .value-small .number { color: #FFF371; }
-.card .value-small .label { border-bottom: 5px solid #EEE; color: white; }
+.card .value-small { color: #FFF371; }
+.card .value-small .title {
+  border-bottom: 5px solid #EEE; color: white;   white-space: nowrap;
+}
+.card .value-small.value-long { font-size: 150%; }
 
 /* Editable */
 #card-editable .value-big .number {
@@ -50,17 +82,29 @@ header .calc {
 .card .value-sep { text-align: center; margin: 30px; position: relative; }
 .card .value-sep:before {
   content: ""; display: block; width: 100%; height: 1px;  top: 7px;
-  background-color: #2f6563; margin-top: 5px; position: absolute;
+  background-color: #0707078f; margin-top: 5px; position: absolute;
 }
-.card .value-sep .label {
+.card .value-sep .title {
   background-color: #56ada9; z-index: 999;
   position: relative; padding: 15px;
 }
 
 /* Descr */
 .card .descr {
-  border-left: 5px solid #2f6563; padding-left: 10px;
+  border-left: 5px solid #00000066; padding: 10px; margin: 60px 0px;
+  line-height: 30px; white-space: pre-line; background-color: #eeeeee26;
 }
 .card a {
-  color: #16302f; text-decoration: none; border-bottom: 2px solid #2f6563;
+  color: #16302f; text-decoration: none; border-bottom: 2px solid #00000033;
 }
+
+/* Share */
+/*.card .share-link {
+  background-color: #fff371; padding: 5px 10px;
+  border-radius: 5px; font-size: 14px;
+}
+*/
+
+/* Sources */
+.card .sources { position: absolute; right: 20px; }
+.card .sources a { margin-right: 5px; }

@@ -1,17 +1,19 @@
 ---
 import Layout from "#layouts/Layout.astro";
 import Card from "#components/Card.astro";
+import { cardDefault } from "#data/data.js";
 
-const emptyCard = {
+
+const emptyCard = {}
+Object.assign(emptyCard, cardDefault);
+Object.assign(emptyCard, {
   title: "Saját számok",
   slug: "sajat-szamitas",
   category: "custom",
   valueBig: 500,
-  valueBigTitle: "milliárd Ft",
-  valueSmallTitle: "minden adófizetőnek",
   sources: {},
   descr: "",
-};
+});
 ---
 
 

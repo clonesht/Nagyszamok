@@ -1,0 +1,100 @@
+{
+  "cardDefault": {
+    "category": "corruption",
+    "valueBigCurrency": "milliárd forint",
+    "valueSmallCurrency": "forint",
+    "valueSmallTitle": "minden adófizetőnek"
+  },
+  "cards": [
+    {
+      "title": "Jelenleg visszatartott és elbukott EU-s pénzek összege",
+      "slug": "Visszatartott-EU-forrasok",
+      "valueBig": 8815,
+      "descr": "Jogállamiság hiánya, korrupciós és közbeszerzési hiányosságok miatt visszatartott vagy elvesztett EU-s források.\nEbből végleg elveszített: 815 milliárd forint. (-181 111 forint minden adófizetőnek)",
+      "sources": {
+        "#1": "https://www.atv.hu/belfold/20250102/euro-magyar-kormany-eu-tamogatas/",
+        "#2": "https://telex.hu/kulfold/2026/01/01/eu-n-2-forrasvesztes-2025-400-milliard-orban-boka-navracsics/"
+      }
+    },
+    {
+      "title": "Az MNB botrányban érintett közpénz",
+      "slug": "MNB-kozpenz",
+      "category": "ner",
+      "valueBig": 500,
+      "descr": "A Matolcsy-féle alapítványok körül eltűnt közpénzek teljes becsült összege.",
+      "sources": {
+        "#1": "https://hu.euronews.com/2025/03/26/nem-csitul-a-botrany-az-mnb-alapitvanyabol-eltunt-kozpenz-korul"
+      }
+    },
+    {
+      "title": "Államadósság-törlesztésre fordított összeg",
+      "slug": "Allamadossag-torlesztes",
+      "category": "debt",
+      "valueBig": 4198,
+      "valueBigCurrency": "milliárd forint évente",
+      "valueSmallCurrency": "forint évente",
+      "descr": "GDP-arányosan a legmagasabb az EU-ban.\nEz 2010-ben évi 1100 Mrd forint volt (244 000 Ft adófizetőként)",
+      "sources": {
+        "#1": "https://444.hu/2026/01/08/oriasi-hiannyal-zarta-2025-ot-a-magyar-allam-nagy-marton-meg-novemberben-is-elszamolta-magat-700-milliarddal"
+      }
+    },
+    {
+      "title": "Kormányközeli médiumokra fordított összeg",
+      "category": "propaganda",
+      "valueBig": 2500,
+      "descr": "2010 óta MTVA, NMHH, Nemzeti Sport, RMDSZ-közeli és KESMA médiumok támogatására fordított kormányzati költések.",
+      "sources": {
+        "#1": "https://atlatszo.hu/kozadat/2025/02/18/kipereltuk-35-milliard-forintert-vette-meg-az-allam-a-nemzeti-sportot/",
+        "#2": "https://telex.hu/gazdasag/2025/05/12/tiltott-allami-tamogatas-hirdetes-mediapiac-europa-bizottsag-panasz-magyar-hang",
+        "#3": "https://telex.hu/gazdasag/2024/10/21/160-milliard-forint-koltsegvetes-2025-kozmedia-mtva",
+        "#4": "https://www.blikk.hu/gazdasag/penz/kozmedia-koltsegvetes-2024/q0rzm2f"
+      }
+    },
+    {
+      "title": "Lélegeztetőgépek beszerzése a COVID-járvány alatt",
+      "valueBig": 300,
+      "descr": "Feleslegesen vásárolt, nem használt eszközök jóval a piaci ár fölött gyanús közvetítőcégeken keresztül. A beszerzéssel kapcsolatos iratokat a tárca közlése szerint megsemmisítették.",
+      "sources": {
+        "#1": "https://transparency.hu/hirek/lelegeztetogep_kudarcos_tovabbertekesites/"
+      }
+    },
+    {
+      "title": "Stadionépítések 10 év alatt",
+      "slug": "Stadion-epitesek",
+      "category": "sport",
+      "valueBig": 600,
+      "descr": "27+ stadion építési és felújítási költsége 2014 és 2024 között. A legtöbb helyen az üzemeltetést sem fedezik a jegyeladások.",
+      "sources": {
+        "#1": "https://telex.hu/g7/penz/2024/08/14/a-600-milliardos-ut-felcsuttol-nyiregyhazaig"
+      }
+    },
+    {
+      "title": "NER-es magántőkealapokba helyezett pénz",
+      "category": "ner",
+      "valueBig": 1311,
+      "descr": "Átláthatlan és titkos tulajdonosi hátterű, NER-es magántőkealapokba kihelyezett állami pénz.",
+      "sources": {
+        "#1": "https://24.hu/belfold/2025/12/09/magantoke-alap-transparency-tanulmany-tiborcz-istvan/"
+      }
+    },
+    {
+      "title": "Budapest–Belgrád vasút magyar szakasza",
+      "valueBig": 800,
+      "descr": "Több száz éves megtérüléssel, nagyvárosokat elkerülve, a hasonló fejlesztések árának többszörösébe kerülve, kínai hitelből épült.",
+      "sources": {
+        "#1": "https://444.hu/2021/11/26/joval-dragabb-a-budapest-belgrad-vasut-magyarorszagon-mint-szerbiaban"
+      }
+    },
+    {
+      "title": "Akkumulátorgyártó cégek állami támogatása",
+      "category": "environment",
+      "valueBig": 1500,
+      "descr": "A dolgozók közel fele külföldi, semmibe vett bírósági döntések, extrém magas vízigény: A gödi Samsung-gyár napi vízigénye nagyjából egy 112 ezer lakosú városénak felel meg.",
+      "sources": {
+        "#1": "https://24.hu/fn/gazdasag/2025/04/18/akkugyar-kormany-1500-milliard-szijjarto-peter-elismeres/",
+        "#2": "https://24.hu/fn/gazdasag/2021/11/26/samsung-sdi-god-gyar-dolgozoi-letszam/",
+        "#3": "https://telex.hu/gazdasag/2024/05/03/god-samsung-engedely-akkumulatorgyar-birosag-kornyezethasznalat"
+      }
+    }
+  ]
+}
