@@ -1,7 +1,7 @@
 + Share button
 + Custom category colors
 + Footer
-- Deploy to cf
++ Deploy to cf
 - Mobile view
 - Img gen (satori)
 - Deploy path: github live -> cf

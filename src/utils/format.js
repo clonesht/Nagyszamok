@@ -1,4 +1,4 @@
-export const TAXPAYERS = 4_500_000;
+export const TAXPAYERS = 4_609_000;
 
 export function formatHuf(number) {
   return new Intl.NumberFormat('hu-HU').format(Math.round(number));
