@@ -3,7 +3,7 @@ import Layout from "#layouts/Layout.astro";
 import CardRow from "#components/CardRow.astro";
 import { cards } from "#data/data.js";
 
-const cardsSorted = cards.sort((a, b) => b.valueBig - a.valueBig);
+const cardsSorted = cards.toSorted((a, b) => b.valueBig - a.valueBig);
 
 ---
 
