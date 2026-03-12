@@ -1,5 +1,5 @@
 import { urlSlug } from "#utils/format.js";
-import data from "./data.json" with { type: "json" };
+import data from "./data.json";
 
 const cards = [];
 const cardDefault = data.cardDefault;

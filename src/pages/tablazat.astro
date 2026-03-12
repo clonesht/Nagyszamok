@@ -10,7 +10,9 @@ const cardsSorted = cards.sort((a, b) => b.valueBig - a.valueBig);
 <Layout title="Összes adat táblázatban">
   <table class="card-table">
     <tr>
-      <th>Téma</th><th class="value">Teljes összeg</th><th class="value">Minden adófizetőnek</th>
+      <th>Téma</th>
+      <th class="value">Teljes összeg</th>
+      <th class="value">Adófizetőkre lebontva</th>
     </tr>
     {cardsSorted.map(card => (
       <CardRow card={card}/>
