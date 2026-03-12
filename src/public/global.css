@@ -13,16 +13,17 @@ a:hover, a:hover .title {
 
 /* Header */
 header { margin: 20px; position: relative; }
-header .logo, header .calc {
+header {
   text-transform: uppercase; border-bottom: 1px solid #EEE;
   font-size: 14px; font-family: Consolas, monospace;
 }
 header .logo { font-weight: bold; text-decoration: none }
 header .logo .title { text-decoration: underline; vertical-align: 4px; }
-header .calc {
-  right: 10px; position: absolute; font-size: 11px; text-decoration: none
-}
-header .calc .title { text-decoration: underline 1.5px #0000002e; }
+
+header .right { right: 10px; position: absolute; top: 0px; font-size: 11px; }
+header .right .sep { opacity: 0.3; }
+header .right a { text-decoration: none; text-decoration: none; }
+header .right a .title { text-decoration: underline 1.5px #0000002e; }
 
 
 .more-link { padding: 20px; display: block; font-size: 15px }
@@ -58,7 +59,6 @@ header .calc .title { text-decoration: underline 1.5px #0000002e; }
   background-color: #f4b05f;
   .value-sep .title { background-color: #f4b05f }
 }
-
 
 /* Value */
 .card .value {
@@ -98,6 +98,25 @@ header .calc .title { text-decoration: underline 1.5px #0000002e; }
   color: #16302f; text-decoration: none; border-bottom: 2px solid #00000033;
 }
 
+/* Table */
+
+.card-table {
+  max-width: 1200px; margin: auto;
+  background-color: white; border-radius: 8px; padding: 10px;
+}
+.card-table th {
+  font-size: 13px; font-family: Consolas; vertical-align: top;
+   text-align: left;
+}
+.card-table th, .card-table td { padding: 8px 15px; }
+.card-table th.value { text-align: right; }
+.card-table td { vertical-align: top; font-size: 17px; }
+.card-table tr td { border-top: 1px solid #CCC }
+.card-table td.value { white-space: nowrap; text-align: right; }
+.card-table a {
+  text-decoration: none; border-bottom: 2px solid #e7e7e7; line-height: 27px;
+}
+
 /* Share */
 /*.card .share-link {
   background-color: #fff371; padding: 5px 10px;
@@ -120,4 +139,6 @@ footer {
   .card h2 { font-size: 30px; line-height: 45px }
   .card .value { font-size: 25px; line-height: 35px; }
   .card .value-sep { margin: 20px; }
+
+  .card-table th, .card-table td { font-size: 12px; }
 }

@@ -1,0 +1,19 @@
+---
+import Layout from "#layouts/Layout.astro";
+import CardRow from "#components/CardRow.astro";
+import { cards } from "#data/data.js";
+
+const cardsSorted = cards.sort((a, b) => b.valueBig - a.valueBig);
+
+---
+
+<Layout title="Összes adat táblázatban">
+  <table class="card-table">
+    <tr>
+      <th>Téma</th><th class="value">Teljes összeg</th><th class="value">Minden adófizetőnek</th>
+    </tr>
+    {cardsSorted.map(card => (
+      <CardRow card={card}/>
+    ))}
+  </table>
+</Layout>

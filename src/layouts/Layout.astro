@@ -8,45 +8,51 @@ import "../public/fonts.css";
 
 <!doctype html>
 <html lang="hu">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="description" content="Magyarországi milliárdok érthetőbb léptékben">
-  <meta name="keywords" content="Magyarország, Korrupció, Választás, Számolás, Kalkulátor">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, interactive-widget=resizes-content">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <title>{title ? `${title} - Nagyszámok.hu` : "Nagyszámok.hu - Milliárdok érthetőbb léptékben"}</title>
-  <link rel="preload" href="/fonts/literata-v40-latin_latin-ext-regular.woff2" as="font" type="font/woff2" crossorigin>
-  <meta property="og:title" content="Nagyszámok.hu - Milliárdok érthetőbb léptékben">
-  <meta property="og:description" content="Milliárdok érthetőbb léptékben: Magyarországi állami költések megfoghatóbban, adófizetőkre lebontva.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://nagyszamok.hu">
-  <meta property="og:image" content="https://nagyszamok.hu/preview.png">
-  <meta property="og:image:alt" content="Nagyszámok.hu - Milliárdok érthetőbb léptékben">
-</head>
-<body>
-  <header>
-    <a href="/" class="logo">
-      <img src="/img/logo.png" width=16 height=16 alt="Nagyszamok.hu: Milliárdok érthetőbb léptékben"/>
-      <span class="title">Nagyszamok.hu</span>
-    </a>
-    <a href="/calc" class="calc">
-      +
-     <span class="title">Saját számolás</span>
-    </a>
-  </header>
-  <main>
-    <slot />
-  </main>
-  <footer>
-    <p>Adófizetők száma: 4 609 000 fő forrás: <a href="https://www.ksh.hu/gyorstajekoztatok/fem/fem2601.html" target="_blank" rel="noopener noreferrer">KSH</a></p>
-    <p>
-      Módosítások, hibák, ötletek:
-      <a href="https://github.com/clonesht/Nagyszamok" target="_blank">github</a>,
-      <a href="mailto:issue@nagyszamok.hu">issue@nagyszamok.hu</a>,
-      köszi!
-    </p>
-  </footer>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Magyarországi milliárdok érthetőbb léptékben">
+    <meta name="keywords" content="Magyarország, Korrupció, Választás, Számolás, Kalkulátor">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, interactive-widget=resizes-content">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <title>{title ? `${title} - Nagyszámok.hu` : "Nagyszámok.hu - Milliárdok érthetőbb léptékben"}</title>
+    <link rel="preload" href="/fonts/literata-v40-latin_latin-ext-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <meta property="og:title" content="Nagyszámok.hu - Milliárdok érthetőbb léptékben">
+    <meta property="og:description" content="Milliárdok érthetőbb léptékben: Magyarországi állami költések megfoghatóbban, adófizetőkre lebontva.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nagyszamok.hu">
+    <meta property="og:image" content="https://nagyszamok.hu/preview.png">
+    <meta property="og:image:alt" content="Nagyszámok.hu - Milliárdok érthetőbb léptékben">
+  </head>
+  <body>
+    <header>
+      <a href="/" class="logo">
+        <img src="/img/logo.png" width=16 height=16 alt="Nagyszamok.hu: Milliárdok érthetőbb léptékben"/>
+        <span class="title">Nagyszamok.hu</span>
+      </a>
+      <div class="right">
+        <a href="/tablazat" class="list">
+          <span class="title">Táblázatban</span>
+        </a>
+        <span class="sep">|</span>
+        <a href="/szamolas" class="calc">
+          +
+          <span class="title">Számolás</span>
+        </a>
+      </div>
+    </header>
+    <main>
+      <slot />
+    </main>
+    <footer>
+      <p>Adófizetők száma: 4 609 000 fő forrás: <a href="https://www.ksh.hu/gyorstajekoztatok/fem/fem2601.html" target="_blank" rel="noopener noreferrer">KSH</a></p>
+      <p>
+        Módosítások, hibák, ötletek:
+        <a href="https://github.com/clonesht/Nagyszamok" target="_blank">github</a>,
+        <a href="mailto:issue@nagyszamok.hu">issue@nagyszamok.hu</a>,
+        köszi!
+      </p>
+    </footer>
+  </body>
 </html>

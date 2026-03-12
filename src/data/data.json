@@ -28,6 +28,7 @@
     },
     {
       "title": "Államadósság-törlesztésre fordított összeg",
+      "rowTitle": "Évente államadósság-törlesztésre fordított összeg",
       "slug": "Allamadossag-torlesztes",
       "category": "debt",
       "valueBig": 4198,

@@ -1,0 +1,21 @@
+---
+import { formatHuf, calcValueSmall, TAXPAYERS } from "#utils/format.js";
+
+const { card } = Astro.props;
+
+const valueSmall = calcValueSmall(card.valueBig);
+---
+
+<tr class:list={["cardrow", `cardrow-${card.category}`]} data-category={card.category} >
+  <td clas="title">
+    <a href={`/tema/${card.slug}`}>{card.rowTitle || card.title}</a>
+  </td>
+  <td class="value-big value">
+    <span class="number">{card.valueBig}</span>
+    <span class="currency">Mrd&nbsp;Ft</span>
+  </td>
+  <td class="value-small value" class:list={[{ "value-long": (card.valueSmallTitle.length + card.valueSmallCurrency.length) > 25 }]}>
+    <span class="number">-{formatHuf(valueSmall)}</span>
+    <span class="currency">Ft</span>
+  </td>
+</tr>
