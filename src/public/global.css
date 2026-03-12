@@ -99,22 +99,23 @@ header .right a .title { text-decoration: underline 1.5px #0000002e; }
 }
 
 /* Table */
-
 .card-table {
-  max-width: 1200px; margin: auto;
+  max-width: 800px; margin: auto;
   background-color: white; border-radius: 8px; padding: 10px;
 }
 .card-table th {
-  font-size: 13px; font-family: Consolas; vertical-align: top;
-   text-align: left;
+  font-size: 13px; font-family: Consolas;
+  text-align: left; vertical-align: bottom;
 }
 .card-table th, .card-table td { padding: 8px 15px; }
 .card-table th.value { text-align: right; }
 .card-table td { vertical-align: top; font-size: 17px; }
 .card-table tr td { border-top: 1px solid #CCC }
-.card-table td.value { white-space: nowrap; text-align: right; }
+.card-table td.value {
+  white-space: nowrap; text-align: right; line-height: 27px;
+}
 .card-table a {
-  text-decoration: none; border-bottom: 2px solid #e7e7e7; line-height: 27px;
+  text-decoration: underline solid #97d6d3 2px; line-height: 27px;
 }
 
 /* Share */
