@@ -1,0 +1,52 @@
+---
+import Layout from "#layouts/Layout.astro";
+import CardRow from "#components/CardRow.astro";
+import { cards } from "#data/data.js";
+
+const cardsSorted = cards.toSorted((a, b) => b.valueBig - a.valueBig);
+
+export const byLinks = {
+  "adofizetokre": "Adófizetőkre lebontva",
+  "haztartasonkent": "Háztartásokra lebontva",
+  //"csaladonkent": "Családonként",
+  "allampolgaronkent": "Állampolgárokra lebontva",
+}
+
+export async function getStaticPaths() {
+  const dynamicPaths = Object.keys(byLinks).map(key => ({
+    params: { slug: key },
+    props: { by: key },
+  }));
+
+  const basePath = {
+    params: { slug: undefined },
+    props: { by: "allampolgaronkent" },
+  };
+
+  return [basePath, ...dynamicPaths];
+}
+
+const byDefault = "allampolgaronkent";
+const selected = Astro.props.by || byDefault;
+---
+
+<Layout title="Összes adat táblázatban">
+  <div class="changer" class="active-{changer_active}">
+    Lebontás:
+    {Object.entries(byLinks).map(([key, val]) => (
+      <a href={`/tablazat/${key}`} class:list={{selected: selected === key}}>
+        {val.replace(" lebontva", "")}
+      </a>
+    ))}
+  </div>
+  <table class="card-table">
+    <tr>
+      <th>Téma</th>
+      <th class="value">Teljes összeg</th>
+      <th class="value">{byLinks[selected]}</th>
+    </tr>
+    {cardsSorted.map(card => (
+      <CardRow card={card} by={selected}/>
+    ))}
+  </table>
+</Layout>

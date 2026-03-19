@@ -99,6 +99,9 @@ header .right a .title { text-decoration: underline 1.5px #0000002e; }
 }
 
 /* Table */
+.changer { text-align: center; font-size: 13px; padding: 20px; }
+.changer a { margin: 0px 10px; }
+.changer a.selected { font-weight: bold; }
 .card-table {
   max-width: 800px; margin: auto;
   background-color: white; border-radius: 8px; padding: 10px;

@@ -1,9 +1,10 @@
 ---
 import { formatHuf, calcValueSmall, TAXPAYERS } from "#utils/format.js";
 
-const { card } = Astro.props;
+const { card, by } = Astro.props;
 
-const valueSmall = calcValueSmall(card.valueBig);
+const valueSmall = calcValueSmall(card.valueBig, by);
+
 ---
 
 <tr class:list={["cardrow", `cardrow-${card.category}`]} data-category={card.category} >

@@ -1,0 +1,35 @@
+---
+import Layout from "#layouts/Layout.astro";
+import CardRow from "#components/CardRow.astro";
+import { cards } from "#data/data.js";
+
+const cardsSorted = cards.toSorted((a, b) => b.valueBig - a.valueBig);
+
+const byLinks = {
+  "adofizetokre": "Adófizetőnként",
+  "csaladokra": "Családonként",
+  "allampolgaronkent": "Állampolgáronként"
+  undefined: "Állampolgáronként"
+}
+const byDefault = "allampolgaronkent";
+const selected = Astro.url.searchParams.get("by") || byDefault;
+console.log(Astro.url.searchParams);
+---
+
+<Layout title="Összes adat táblázatban">
+  <div class="changer" class="active-{changer_active}">
+    {Object.entries(byLinks).map(([key, val]) => (
+      <a href={`/tablazat?by=${key}`}>{val}</a>
+    ))}
+  </div>
+  <table class="card-table">
+    <tr>
+      <th>Téma</th>
+      <th class="value">Teljes összeg</th>
+      <th class="value">{byLinks[selected]}</th>
+    </tr>
+    {cardsSorted.map(card => (
+      <CardRow card={card} by={selected}/>
+    ))}
+  </table>
+</Layout>
